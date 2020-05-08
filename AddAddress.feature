@@ -4,8 +4,6 @@ Feature: Login as user
     Then Log in using user:elftiptfinbmkemsjc@awdrt.net with password: coderslab
     Then Choose " + Create new address"
     Then Fill form using "example" table with fields: <alias>, <address>, <city>, <zipCode>, <phone>
-    Then Check data correctness
-    And Close device
    Examples:
 
 

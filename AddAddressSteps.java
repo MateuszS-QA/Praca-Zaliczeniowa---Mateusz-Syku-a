@@ -52,17 +52,12 @@ public class AddAddressSteps extends AddAddressClass {
         driver.findElement(By.name("postcode")).sendKeys(zipCode);
         new Select(driver.findElement(By.name("id_country"))).selectByIndex(1);
         driver.findElement(By.name("phone")).sendKeys(phone);
+        WebElement submitAddress = driver.findElement(By.cssSelector("#content > div > div > form > footer > button"));
+        submitAddress.click();
+        driver.close();
         throw new PendingException();
     }
-    @Then("^Check data correctness$")
-    public void checkDataCorrectness() {
-        WebElement submitAddress = driver.findElement(By.name("submitAddress"));
-        submitAddress.click();
 
 
-    }
-    
-    @And("^Close device$")
-    public void closeDevice() {
-    }
+
 }
